@@ -1,0 +1,25 @@
+{
+    "name": "scilla",
+    "displayName": "Scilla",
+    "description": "Syntax highlighting for scilla lang",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "scilla",
+            "aliases": ["Scilla", "scilla"],
+            "extensions": [".scilla"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "scilla",
+            "scopeName": "source.scilla",
+            "path": "./syntaxes/scilla.tmLanguage.json"
+        }]
+    }
+}
