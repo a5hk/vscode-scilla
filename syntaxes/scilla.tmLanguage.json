@@ -12,9 +12,6 @@
       "include": "#libraries"
     },
     {
-      "include": "#variables"
-    },
-    {
       "include": "#constants"
     },
     {
@@ -31,6 +28,9 @@
     },
     {
       "include": "#contract"
+    },
+    {
+      "include": "#numbers"
     }
   ],
   "repository": {
@@ -98,7 +98,7 @@
       "patterns": [
         {
           "name": "support.constant.scilla",
-          "match": "\\b(False|True|Nil|Zero)\\b"
+          "match": "\\b(False|True|Nil|Zero|_amount|_sender|_recipient|_tag|_eventname|_this_address|_creation_block|_origin|_balance)\\b"
         }
       ]
     },
@@ -192,6 +192,13 @@
           "include": "#parameters_list"
         }
       ]
+    },
+    "numbers": {
+      "match": "\\s*(\\-?)\\b([1-9][0-9]*)\\b",
+      "captures": {
+        "1": { "name": "keyword.operator.arithmetic.scilla" },
+        "2": { "name": "constant.numeric.scilla" }
+      }
     }
   },
   "scopeName": "source.scilla"
