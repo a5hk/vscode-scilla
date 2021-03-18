@@ -3,9 +3,6 @@
   "name": "Scilla",
   "patterns": [
     {
-      "include": "#keywords"
-    },
-    {
       "include": "#types"
     },
     {
@@ -21,9 +18,6 @@
       "include": "#strings"
     },
     {
-      "include": "#punctuations"
-    },
-    {
       "include": "#functions"
     },
     {
@@ -34,6 +28,12 @@
     },
     {
       "include": "#function_call"
+    },
+    {
+      "include": "#punctuations"
+    },
+    {
+      "include": "#keywords"
     }
   ],
   "repository": {
@@ -45,7 +45,7 @@
         },
         {
           "name": "keyword.scilla",
-          "match": "\\b(accept|as|catch|delete|Emp|end|event|exists|field|forall|fun|in|let|Map|match|of|scilla_version|send|tfun|throw|try|with)\\b"
+          "match": "\\b(accept|as|builtin|catch|contract|delete|Emp|end|event|exists|field|forall|fun|let|library|in|import|Map|match|of|procedure|scilla_version|send|tfun|throw|transition|try|with)\\b"
         },
         {
           "name": "keyword.operator.scilla",
@@ -136,15 +136,46 @@
       ]
     },
     "functions": {
-      "begin": "\\b(transition|procedure)\\b\\s*([a-zA-Z][a-zA-Z0-9_]*)\\s*",
-      "end": "(?<=\\))",
-      "beginCaptures": {
-        "1": { "name": "keyword.scilla" },
-        "2": { "name": "entity.name.function.scilla" }
-      },
       "patterns": [
         {
-          "include": "#parameters_list"
+          "begin": "\\b(transition|procedure)\\b\\s*([a-zA-Z][a-zA-Z0-9_]*)\\s*",
+          "end": "(?<=\\))",
+          "beginCaptures": {
+            "1": { "name": "keyword.scilla" },
+            "2": { "name": "entity.name.function.scilla" }
+          },
+          "patterns": [
+            {
+              "include": "#parameters_list"
+            }
+          ]
+        },
+        {
+          "begin": "\\b(let)\\s*([a-z][a-zA-Z0-9_]*)\\s*(=)\\s*(fun|tfun)\\s*",
+          "end": "(?<=\\))",
+          "beginCaptures": {
+            "1": { "name": "keyword.scilla" },
+            "2": { "name": "entity.name.function.scilla" },
+            "3": { "name": "keyword.operator.scilla" },
+            "4": { "name": "keyword.scilla" }
+          },
+          "patterns": [
+            {
+              "include": "#parameters_list"
+            }
+          ]
+        },
+        {
+          "begin": "\\b(fun|tfun)\\s*",
+          "end": "(?<=\\))",
+          "beginCaptures": {
+            "1": { "name": "keyword.scilla" }
+          },
+          "patterns": [
+            {
+              "include": "#parameters_list"
+            }
+          ]
         }
       ]
     },
