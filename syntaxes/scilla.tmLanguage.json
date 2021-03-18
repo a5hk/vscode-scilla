@@ -46,7 +46,7 @@
         },
         {
           "name": "keyword.operator.scilla",
-          "match": "(=|=>|:=|<-|\\|)"
+          "match": "(=>|=|:=|<-|\\|)"
         }
       ]
     },
@@ -194,7 +194,7 @@
       ]
     },
     "numbers": {
-      "match": "\\s*(\\-?)\\b([1-9][0-9]*)\\b",
+      "match": "\\s*(\\-?)\\b([0-9]+)\\b",
       "captures": {
         "1": { "name": "keyword.operator.arithmetic.scilla" },
         "2": { "name": "constant.numeric.scilla" }
