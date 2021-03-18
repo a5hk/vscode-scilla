@@ -57,10 +57,13 @@
           "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Map|Bool|Option|List|Pair|Nat)\\b"
         },
         {
-          "match": "\\b(type)\\s*([A-Z][a-zA-Z0-9_]*)",
-          "captures": {
-            "1": { "name": "keyword.control.scilla" },
-            "2": { "name": "storage.type.scilla" }
+          "begin": "\\b(type)\\b\\s*",
+          "end": "([A-Z][a-zA-Z0-9_]*)",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.scilla" }
+          },
+          "endCaptures": {
+            "0": { "name": "storage.type.scilla" }
           }
         }
       ]
