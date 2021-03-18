@@ -28,6 +28,9 @@
     },
     {
       "include": "#functions"
+    },
+    {
+      "include": "#contract"
     }
   ],
   "repository": {
@@ -39,7 +42,7 @@
         },
         {
           "name": "keyword.scilla",
-          "match": "\\b(accept|as|builtin|catch|contract|delete|Emp|end|event|exists|field|forall|fun|import|in|let|library|Map|match|of|scilla_version|send|tfun|throw|try|type|with)\\b"
+          "match": "\\b(accept|as|builtin|catch|delete|Emp|end|event|exists|field|forall|fun|import|in|let|library|Map|match|of|scilla_version|send|tfun|throw|try|with)\\b"
         },
         {
           "name": "keyword.operator.scilla",
@@ -52,6 +55,13 @@
         {
           "name": "support.type.scilla",
           "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Map|Bool|Option|List|Pair|Nat)\\b"
+        },
+        {
+          "match": "\\b(type)\\s*([A-Z][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.control.scilla" },
+            "2": { "name": "storage.type.scilla" }
+          }
         }
       ]
     },
@@ -110,15 +120,26 @@
       ]
     },
     "functions": {
-      "begin": "\\b(transition|procedure)\\b\\s*([a-zA-Z][a-zA-Z0-9_]*)\\b\\s*(\\()",
-      "end": "\\)",
+      "begin": "\\b(transition|procedure)\\b\\s*([a-zA-Z][a-zA-Z0-9_]*)\\s*",
+      "end": "(?<=\\))",
       "beginCaptures": {
         "1": { "name": "keyword.scilla" },
-        "2": { "name": "entity.name.function.scilla" },
-        "3": { "name": "punctuation.definition.arguments.begin.bracket.round.scilla" }
+        "2": { "name": "entity.name.function.scilla" }
+      },
+      "patterns": [
+        {
+          "include": "#parameters_list"
+        }
+      ]
+    },
+    "parameters_list": {
+      "begin": "\\(",
+      "end": "\\)",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.parameters.begin.scilla" }
       },
       "endCaptures": {
-        "0": { "name": "punctuation.definition.arguments.end.bracket.round.scilla" }
+        "0": { "name": "punctuation.definition.parameters.end.scilla" }
       },
       "patterns": [
         {
@@ -127,7 +148,7 @@
       ]
     },
     "parameters": {
-      "begin": "([A-Z][a-zA-Z0-9_]*)\\s*(:)\\s*",
+      "begin": "([a-zA-Z][a-zA-Z0-9_]*)\\s*(:)\\s*",
       "end": "(?!\\G)",
       "beginCaptures": {
         "1": { "name": "variable.parameter.scilla" },
@@ -139,10 +160,23 @@
         },
         {
           "name": "storage.type.scilla",
-          "match": "[a-zA-Z0-9][a-zA-Z0-9_]*"
+          "match": "[A-Z][a-zA-Z0-9_]*"
         },
         {
           "include": "$self"
+        }
+      ]
+    },
+    "contract": {
+      "begin": "\\b(contract)\\b\\s*([A-Z][a-zA-Z0-9_]*)\\b\\s*",
+      "end": "(?<=\\))",
+      "beginCaptures": {
+        "1": { "name": "keyword.scilla" },
+        "2": { "name": "entity.name.class" }
+      },
+      "patterns": [
+        {
+          "include": "#parameters_list"
         }
       ]
     }
