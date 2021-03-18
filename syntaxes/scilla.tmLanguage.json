@@ -31,6 +31,9 @@
     },
     {
       "include": "#numbers"
+    },
+    {
+      "include": "#function_call"
     }
   ],
   "repository": {
@@ -42,7 +45,7 @@
         },
         {
           "name": "keyword.scilla",
-          "match": "\\b(accept|as|builtin|catch|delete|Emp|end|event|exists|field|forall|fun|in|let|Map|match|of|scilla_version|send|tfun|throw|try|with)\\b"
+          "match": "\\b(accept|as|catch|delete|Emp|end|event|exists|field|forall|fun|in|let|Map|match|of|scilla_version|send|tfun|throw|try|with)\\b"
         },
         {
           "name": "keyword.operator.scilla",
@@ -144,6 +147,13 @@
           "include": "#parameters_list"
         }
       ]
+    },
+    "function_call": {
+      "match": "\\b(builtin)\\b\\s*([a-z][a-zA-Z0-9_]*)",
+      "captures": {
+        "1": { "name": "keyword.scilla" },
+        "2": { "name": "support.function.scilla" }
+      }
     },
     "parameters_list": {
       "begin": "\\(",
