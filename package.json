@@ -6,6 +6,7 @@
   "publisher": "a5hk",
   "author": "a5hk",
   "license": "MIT",
+  "icon": "icon.png",
   "homepage": "https://github.com/a5hk/vscode-scilla",
   "repository": {
     "type": "git",
