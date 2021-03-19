@@ -206,7 +206,7 @@
         },
         {
           "name": "support.function.scilla",
-          "match": "\\b(Cons|Nil|Succ|Some|Zero)\\b"
+          "match": "\\b(Cons|Nil|Some|Succ|Zero)\\b"
         }
       ]
     },
