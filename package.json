@@ -1,25 +1,42 @@
 {
-    "name": "scilla",
-    "displayName": "Scilla",
-    "description": "Syntax highlighting for scilla lang",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.54.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "vscode-scilla",
+  "displayName": "VS Code Scilla",
+  "description": "Syntax highlighting for Scilla",
+  "version": "0.0.1",
+  "publisher": "a5hk",
+  "author": "a5hk",
+  "license": "MIT",
+  "homepage": "https://github.com/a5hk/vscode-scilla",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a5hk/vscode-scilla"
+  },
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "scilla",
+        "aliases": [
+          "Scilla",
+          "scilla"
+        ],
+        "extensions": [
+          ".scilla"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "scilla",
-            "aliases": ["Scilla", "scilla"],
-            "extensions": [".scilla"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "scilla",
-            "scopeName": "source.scilla",
-            "path": "./syntaxes/scilla.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "scilla",
+        "scopeName": "source.scilla",
+        "path": "./syntaxes/scilla.tmLanguage.json"
+      }
+    ]
+  }
 }
