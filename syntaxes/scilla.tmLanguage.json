@@ -238,6 +238,50 @@
             "1": { "name": "keyword.scilla" },
             "2": { "name": "support.function.scilla" }
           }
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(andb|orb|negb|bool_to_string)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(int32_eq|int64_eq|int128_eq|int256_eq|uint32_eq|uint64_eq|uint128_eq|uint256_eq)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(int32_neq|int64_neq|int128_neq|int256_neq|uint32_neq|uint64_neq|uint128_neq|uint256_neq)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(int32_lt|int64_lt|int128_lt|int256_lt|uint32_lt|uint64_lt|uint128_lt|uint256_lt)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(int32_le|int64_le|int128_le|int256_le|uint32_le|uint64_le|uint128_le|uint256_le)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(int32_gt|int64_gt|int128_gt|int256_gt|uint32_gt|uint64_gt|uint128_gt|uint256_gt)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(int32_ge|int64_ge|int128_ge|int256_ge|uint32_ge|uint64_ge|uint128_ge|uint256_ge)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(list_map|list_filter|list_head|list_tail|list_foldl_while|list_append|list_reverse|list_flatten|list_length|list_eq|list_mem|list_forall|list_exists|list_sort|list_find|list_zip|list_zip_with|list_unzip|list_nth)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(nat_prev|nat_fold_while|is_some_zero|nat_eq|nat_to_int)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(int32_to_nat|int64_to_nat|int128_to_nat|int256_to_nat|uint32_to_nat|uint64_to_nat|uint128_to_nat|uint256_to_nat)\\b"
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(fs|snd)\\b"
         }
       ]
     },
