@@ -149,7 +149,7 @@
       ]
     },
     "comments": {
-      "name": "comment.block.parenthesis.scilla",
+      "name": "comment.block.parens.scilla",
       "begin": "\\(\\*",
       "end": "\\*\\)",
       "beginCaptures": {

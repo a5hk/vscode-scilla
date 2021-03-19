@@ -5,6 +5,7 @@
     "foldl",
     "forall",
     "negb",
+    "parens",
     "succ",
     "tfun"
   ]
