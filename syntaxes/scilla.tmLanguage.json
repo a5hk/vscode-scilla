@@ -84,6 +84,22 @@
           "endCaptures": {
             "0": { "name": "storage.type.scilla" }
           }
+        },
+        {
+          "begin": "\\b(of)\\s*",
+          "end": "$",
+          "beginCaptures": {
+            "1": { "name": "keyword.scilla" }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            },
+            {
+              "name": "storage.type.scilla",
+              "match": "[A-Z][a-zA-Z0-9_]*"
+            }
+          ]
         }
       ]
     },
