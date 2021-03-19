@@ -57,7 +57,7 @@
       "patterns": [
         {
           "name": "support.type.scilla",
-          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Map|Bool|Option|List|Pair|Nat)\\b"
+          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Bool|Option|List|Pair|Nat)\\b"
         },
         {
           "begin": "\\b(type)\\b\\s*",
