@@ -57,7 +57,23 @@
       "patterns": [
         {
           "name": "support.type.scilla",
-          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Bool|Option|List|Pair|Nat)\\b"
+          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Bool|List|Pair|Nat)\\b"
+        },
+        {
+          "begin": "\\bOption\\s*",
+          "end": "(?!\\G)",
+          "beginCaptures": {
+            "0": { "name": "support.type.scilla" }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            },
+            {
+              "name": "storage.type.scilla",
+              "match": "[A-Z][a-zA-Z0-9_]*"
+            }
+          ]
         },
         {
           "begin": "\\b(type)\\b\\s*",
