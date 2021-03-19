@@ -117,7 +117,7 @@
       "patterns": [
         {
           "name": "support.constant.scilla",
-          "match": "\\b(False|True|Nil|Zero|_amount|_sender|_recipient|_tag|_eventname|_this_address|_creation_block|_origin|_balance)\\b"
+          "match": "\\b(False|True|_amount|_sender|_recipient|_tag|_eventname|_this_address|_creation_block|_origin|_balance)\\b"
         }
       ]
     },
@@ -196,11 +196,19 @@
       ]
     },
     "function_call": {
-      "match": "\\b(builtin)\\b\\s*([a-z][a-zA-Z0-9_]*)",
-      "captures": {
-        "1": { "name": "keyword.scilla" },
-        "2": { "name": "support.function.scilla" }
-      }
+      "patterns": [
+        {
+          "match": "\\b(builtin)\\b\\s*([a-z][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": { "name": "keyword.scilla" },
+            "2": { "name": "support.function.scilla" }
+          }
+        },
+        {
+          "name": "support.function.scilla",
+          "match": "\\b(Cons|Nil|Succ|Some|Zero)\\b"
+        }
+      ]
     },
     "parameters_list": {
       "begin": "\\(",
