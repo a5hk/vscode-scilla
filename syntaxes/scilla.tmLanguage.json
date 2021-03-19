@@ -24,9 +24,6 @@
       "include": "#contract"
     },
     {
-      "include": "#numbers"
-    },
-    {
       "include": "#function_call"
     },
     {
@@ -153,6 +150,9 @@
         {
           "name": "support.constant.scilla",
           "match": "\\b(False|True|_amount|_sender|_recipient|_tag|_eventname|_this_address|_creation_block|_origin|_balance)\\b"
+        },
+        {
+          "include": "#numbers"
         }
       ]
     },
