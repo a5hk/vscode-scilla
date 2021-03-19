@@ -1,4 +1,4 @@
-# VS Code Scilla
+# Scilla for Visual Studio Code
 
 Syntax highlighting for Scilla
 
