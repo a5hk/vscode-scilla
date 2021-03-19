@@ -57,7 +57,7 @@
       "patterns": [
         {
           "name": "support.type.scilla",
-          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Bool|List|Pair|Nat|Nil|None|Succ|Zero)\\b"
+          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Bool|List|Pair|Nat|Nil|None|Succ|Zero|Cons|Some)\\b"
         },
         {
           "begin": "\\bOption\\s*",
@@ -76,10 +76,13 @@
           ]
         },
         {
-          "begin": "\\b(Cons|Some)\\b",
-          "end": "(?=\\})",
+          "begin": "\\{",
+          "end": "\\}",
           "beginCaptures": {
-            "0": { "name": "support.type.scilla" }
+            "0": { "name": "punctuation.scilla" }
+          },
+          "endCaptures": {
+            "0": { "name": "punctuation.scilla" }
           },
           "patterns": [
             {
@@ -199,7 +202,7 @@
           ]
         },
         {
-          "begin": "\\b(let)\\s*([a-z][a-zA-Z0-9_]*)\\s*(=)\\s*(fun|tfun)\\s*",
+          "begin": "\\b(let)\\s*([a-z][a-zA-Z0-9_]*)\\s*(=)\\s*(fun)\\s*",
           "end": "(?<=\\))",
           "beginCaptures": {
             "1": { "name": "keyword.scilla" },
@@ -214,7 +217,7 @@
           ]
         },
         {
-          "begin": "\\b(fun|tfun)\\s*",
+          "begin": "\\b(fun)\\s*",
           "end": "(?<=\\))",
           "beginCaptures": {
             "1": { "name": "keyword.scilla" }
