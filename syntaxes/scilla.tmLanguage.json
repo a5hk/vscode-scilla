@@ -57,7 +57,7 @@
       "patterns": [
         {
           "name": "support.type.scilla",
-          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Bool|List|Pair|Nat)\\b"
+          "match": "\\b(Int32|Int64|Int128|Int256|Uint32|Uint64|Uint128|Uint256|String|BNum|Message|Event|ByStr|ByStr20|ByStr32|ByStr64|Bool|List|Pair|Nat|Cons|Nil|None|Some|Succ|Zero)\\b"
         },
         {
           "begin": "\\bOption\\s*",
@@ -219,10 +219,6 @@
             "1": { "name": "keyword.scilla" },
             "2": { "name": "support.function.scilla" }
           }
-        },
-        {
-          "name": "support.function.scilla",
-          "match": "\\b(Cons|Nil|Some|Succ|Zero)\\b"
         }
       ]
     },
