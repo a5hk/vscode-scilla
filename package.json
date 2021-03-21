@@ -2,7 +2,7 @@
   "name": "vscode-scilla",
   "displayName": "Scilla",
   "description": "Syntax highlighting for Scilla",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "publisher": "a5hk",
   "author": "a5hk",
   "license": "MIT",
