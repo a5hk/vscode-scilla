@@ -1,8 +1,8 @@
 {
-  "name": "vscode-scilla",
+  "name": "vscode-scillaa",
   "displayName": "Scilla",
   "description": "Syntax highlighting for Scilla",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "a5hk",
   "author": "a5hk",
   "license": "MIT",
@@ -16,7 +16,8 @@
     "vscode": "^1.54.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
     "languages": [
@@ -37,6 +38,12 @@
         "language": "scilla",
         "scopeName": "source.scilla",
         "path": "./syntaxes/scilla.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "scilla",
+        "path": "./snippets/snippets.json"
       }
     ]
   }

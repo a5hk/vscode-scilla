@@ -1,0 +1,566 @@
+{
+  "scilla_version": {
+    "prefix": "sc",
+    "body": "scilla_version ${0:0}"
+  },
+  "accept": {
+    "prefix": "ac",
+    "body": "accept"
+  },
+  "builtin": {
+    "prefix": "bu",
+    "body": "builtin "
+  },
+  "catch": {
+    "prefix": "ca",
+    "body": "catch"
+  },
+  "contract": {
+    "prefix": "co",
+    "body": ["contract ${1:DApp}", "(", "\t${2:owner: ByStr20}$0", ")"]
+  },
+  "delete": {
+    "prefix": "de",
+    "body": "delete "
+  },
+  "event": {
+    "prefix": "ev",
+    "body": "event "
+  },
+  "exists": {
+    "prefix": "ex",
+    "body": "exists"
+  },
+  "field": {
+    "prefix": "fi",
+    "body": "field "
+  },
+  "forall": {
+    "prefix": "fo",
+    "body": "forall"
+  },
+  "fun": {
+    "prefix": "fun",
+    "body": "fun (${1:name}: ${2:Bool}) =>$0"
+  },
+  "function": {
+    "prefix": "lf",
+    "body": "let ${1:one_msg} = fun (${2:msg}: ${3:Message}) =>$0"
+  },
+  "library": {
+    "prefix": "lib",
+    "body": "library "
+  },
+  "import": {
+    "prefix": "im",
+    "body": "import "
+  },
+  "match": {
+    "prefix": "ma",
+    "body": ["match $1 with", "| $2 => $0", "end"]
+  },
+  "procedure": {
+    "prefix": "pr",
+    "body": ["procedure ${1:name}(${2:address: ByStr20})", "\t$0", "end"]
+  },
+  "throw": {
+    "prefix": "th",
+    "body": "throw "
+  },
+  "transition": {
+    "prefix": "tr",
+    "body": ["transition ${1:name}(${2:address: ByStr20})", "\t$0", "end"]
+  },
+  "msg": {
+    "prefix": "mg",
+    "body": "{_tag: $1; _recipient: $2; _amount: $3; ${4:code: }}"
+  },
+  "Int32": {
+    "prefix": "i3",
+    "body": "Int32"
+  },
+  "Int64": {
+    "prefix": "i6",
+    "body": "Int64"
+  },
+  "Int128": {
+    "prefix": "i1",
+    "body": "Int128"
+  },
+  "Int256": {
+    "prefix": "i2",
+    "body": "Int256"
+  },
+  "Uint32": {
+    "prefix": "u3",
+    "body": "Uint32"
+  },
+  "Uint64": {
+    "prefix": "u6",
+    "body": "Uint64"
+  },
+  "Uint128": {
+    "prefix": "u1",
+    "body": "Uint128"
+  },
+  "Uint256": {
+    "prefix": "u2",
+    "body": "Uint256"
+  },
+  "String": {
+    "prefix": "st",
+    "body": "String"
+  },
+  "BNum": {
+    "prefix": "bn",
+    "body": "BNum"
+  },
+  "Message": {
+    "prefix": "me",
+    "body": "Message"
+  },
+  "Event": {
+    "prefix": "et",
+    "body": "Event"
+  },
+  "ByStr": {
+    "prefix": "by",
+    "body": "ByStr"
+  },
+  "ByStr20": {
+    "prefix": "b2",
+    "body": "ByStr20"
+  },
+  "ByStr32": {
+    "prefix": "b3",
+    "body": "ByStr32"
+  },
+  "ByStr64": {
+    "prefix": "b6",
+    "body": "ByStr64"
+  },
+  "Bool": {
+    "prefix": "bo",
+    "body": "Bool"
+  },
+  "List": {
+    "prefix": "li",
+    "body": "List"
+  },
+  "Pair": {
+    "prefix": "pa",
+    "body": "Pair"
+  },
+  "Nat": {
+    "prefix": "na",
+    "body": "Nat"
+  },
+  "None": {
+    "prefix": "no",
+    "body": "None"
+  },
+  "Succ": {
+    "prefix": "su",
+    "body": "Succ"
+  },
+  "Zero": {
+    "prefix": "ze",
+    "body": "Zero"
+  },
+  "Cons": {
+    "prefix": "con",
+    "body": "Cons"
+  },
+  "Some": {
+    "prefix": "so",
+    "body": "Some"
+  },
+  "Option": {
+    "prefix": "op",
+    "body": "Option"
+  },
+  "BoolUtils": {
+    "prefix": "buti",
+    "body": "BoolUtils"
+  },
+  "IntUtils": {
+    "prefix": "iuti",
+    "body": "IntUtils"
+  },
+  "ListUtils": {
+    "prefix": "luti",
+    "body": "ListUtils"
+  },
+  "NatUtils": {
+    "prefix": "nuti",
+    "body": "NatUtils"
+  },
+  "PairUtils": {
+    "prefix": "puti",
+    "body": "PairUtils"
+  },
+  "_amount": {
+    "prefix": "amo",
+    "body": "_amount"
+  },
+  "_sender": {
+    "prefix": "sen",
+    "body": "_sender"
+  },
+  "_recipient": {
+    "prefix": "rec",
+    "body": "_recipient"
+  },
+  "_tag": {
+    "prefix": "tag",
+    "body": "_tag"
+  },
+  "_eventname": {
+    "prefix": "evn",
+    "body": "_eventname"
+  },
+  "_this_address": {
+    "prefix": "thi",
+    "body": "_this_address"
+  },
+  "_creation_block": {
+    "prefix": "cre",
+    "body": "_creation_block"
+  },
+  "_origin": {
+    "prefix": "ori",
+    "body": "_origin"
+  },
+  "_balance": {
+    "prefix": "bal",
+    "body": "_balance"
+  },
+  "BLOCKNUMBER": {
+    "prefix": "blo",
+    "body": "BLOCKNUMBER"
+  },
+  "bool_to_string": {
+    "prefix": "btos",
+    "body": "bool_to_string"
+  },
+  "int32_eq": {
+    "prefix": "i3e",
+    "body": "int32_eq"
+  },
+  "int64_eq": {
+    "prefix": "i6e",
+    "body": "int64_eq"
+  },
+  "int128_eq": {
+    "prefix": "i1e",
+    "body": "int128_eq"
+  },
+  "int256_eq": {
+    "prefix": "i2q",
+    "body": "int256_eq"
+  },
+  "uint32_eq": {
+    "prefix": "u3q",
+    "body": "uint32_eq"
+  },
+  "uint64_eq": {
+    "prefix": "u6q",
+    "body": "uint64_eq"
+  },
+  "uint128_eq": {
+    "prefix": "u1q",
+    "body": "uint128_eq"
+  },
+  "uint256_eq": {
+    "prefix": "u2q",
+    "body": "uint256_eq"
+  },
+  "int32_neq": {
+    "prefix": "i3n",
+    "body": "int32_neq"
+  },
+  "int64_neq": {
+    "prefix": "i6n",
+    "body": "int64_neq"
+  },
+  "int128_neq": {
+    "prefix": "i1n",
+    "body": "int128_neq"
+  },
+  "int256_neq": {
+    "prefix": "i2n",
+    "body": "int256_neq"
+  },
+  "uint32_neq": {
+    "prefix": "u3n",
+    "body": "uint32_neq"
+  },
+  "uint64_neq": {
+    "prefix": "u6n",
+    "body": "uint64_neq"
+  },
+  "uint128_neq": {
+    "prefix": "u1n",
+    "body": "uint128_neq"
+  },
+  "uint256_neq": {
+    "prefix": "u2n",
+    "body": "uint256_neq"
+  },
+  "int32_lt": {
+    "prefix": "i3l",
+    "body": "int32_lt"
+  },
+  "int64_lt": {
+    "prefix": "i6l",
+    "body": "int64_lt"
+  },
+  "int128_lt": {
+    "prefix": "i1l",
+    "body": "int128_lt"
+  },
+  "int256_lt": {
+    "prefix": "i2l",
+    "body": "int256_lt"
+  },
+  "uint32_lt": {
+    "prefix": "u3l",
+    "body": "uint32_lt"
+  },
+  "uint64_lt": {
+    "prefix": "u6l",
+    "body": "uint64_lt"
+  },
+  "uint128_lt": {
+    "prefix": "u1l",
+    "body": "uint128_lt"
+  },
+  "uint256_lt": {
+    "prefix": "u2l",
+    "body": "uint256_lt"
+  },
+  "int32_le": {
+    "prefix": "i3le",
+    "body": "int32_le"
+  },
+  "int64_le": {
+    "prefix": "i6le",
+    "body": "int64_le"
+  },
+  "int128_le": {
+    "prefix": "i1le",
+    "body": "int128_le"
+  },
+  "int256_le": {
+    "prefix": "i2le",
+    "body": "int256_le"
+  },
+  "uint32_le": {
+    "prefix": "u3le",
+    "body": "uint32_le"
+  },
+  "uint64_le": {
+    "prefix": "u6le",
+    "body": "uint64_le"
+  },
+  "uint128_le": {
+    "prefix": "u1le",
+    "body": "uint128_le"
+  },
+  "uint256_le": {
+    "prefix": "u2le",
+    "body": "uint256_le"
+  },
+  "int32_gt": {
+    "prefix": "i3g",
+    "body": "int32_gt"
+  },
+  "int64_gt": {
+    "prefix": "i6g",
+    "body": "int64_gt"
+  },
+  "int128_gt": {
+    "prefix": "i1g",
+    "body": "int128_gt"
+  },
+  "int256_gt": {
+    "prefix": "i2g",
+    "body": "int256_gt"
+  },
+  "uint32_gt": {
+    "prefix": "u3g",
+    "body": "uint32_gt"
+  },
+  "uint64_gt": {
+    "prefix": "u6g",
+    "body": "uint64_gt"
+  },
+  "uint128_gt": {
+    "prefix": "u1g",
+    "body": "uint128_gt"
+  },
+  "uint256_gt": {
+    "prefix": "u2g",
+    "body": "uint256_gt"
+  },
+  "int32_ge": {
+    "prefix": "i3ge",
+    "body": "int32_ge"
+  },
+  "int64_ge": {
+    "prefix": "i6ge",
+    "body": "int64_ge"
+  },
+  "int128_ge": {
+    "prefix": "i1ge",
+    "body": "int128_ge"
+  },
+  "int256_ge": {
+    "prefix": "i2ge",
+    "body": "int256_ge"
+  },
+  "uint32_ge": {
+    "prefix": "u3ge",
+    "body": "uint32_ge"
+  },
+  "uint64_ge": {
+    "prefix": "u6ge",
+    "body": "uint64_ge"
+  },
+  "uint128_ge": {
+    "prefix": "u1ge",
+    "body": "uint128_ge"
+  },
+  "uint256_ge": {
+    "prefix": "u2ge",
+    "body": "uint256_ge"
+  },
+  "list_map": {
+    "prefix": "lima",
+    "body": "list_map"
+  },
+  "list_filter": {
+    "prefix": "lifi",
+    "body": "list_filter"
+  },
+  "list_head": {
+    "prefix": "lihe",
+    "body": "list_head"
+  },
+  "list_tail": {
+    "prefix": "lita",
+    "body": "list_tail"
+  },
+  "list_foldl_while": {
+    "prefix": "lifw",
+    "body": "list_foldl_while"
+  },
+  "list_append": {
+    "prefix": "liap",
+    "body": "list_append"
+  },
+  "list_reverse": {
+    "prefix": "lire",
+    "body": "list_reverse"
+  },
+  "list_flatten": {
+    "prefix": "lifl",
+    "body": "list_flatten"
+  },
+  "list_length": {
+    "prefix": "lile",
+    "body": "list_length"
+  },
+  "list_eq": {
+    "prefix": "lieq",
+    "body": "list_eq"
+  },
+  "list_mem": {
+    "prefix": "lime",
+    "body": "list_mem"
+  },
+  "list_forall": {
+    "prefix": "lifo",
+    "body": "list_forall"
+  },
+  "list_exists": {
+    "prefix": "liex",
+    "body": "list_exists"
+  },
+  "list_sort": {
+    "prefix": "liso",
+    "body": "list_sort"
+  },
+  "list_find": {
+    "prefix": "lifin",
+    "body": "list_find"
+  },
+  "list_zip": {
+    "prefix": "lizi",
+    "body": "list_zip"
+  },
+  "list_zip_with": {
+    "prefix": "lizw",
+    "body": "list_zip_with"
+  },
+  "list_unzip": {
+    "prefix": "liuz",
+    "body": "list_unzip"
+  },
+  "list_nth": {
+    "prefix": "lint",
+    "body": "list_nth"
+  },
+  "nat_prev": {
+    "prefix": "npr",
+    "body": "nat_prev"
+  },
+  "nat_fold_while": {
+    "prefix": "nfw",
+    "body": "nat_fold_while"
+  },
+  "is_some_zero": {
+    "prefix": "issz",
+    "body": "is_some_zero"
+  },
+  "nat_eq": {
+    "prefix": "neq",
+    "body": "nat_eq"
+  },
+  "nat_to_int": {
+    "prefix": "nti",
+    "body": "nat_to_int"
+  },
+  "int32_to_nat": {
+    "prefix": "i3tn",
+    "body": "int32_to_nat"
+  },
+  "int64_to_nat": {
+    "prefix": "i6tn",
+    "body": "int64_to_nat"
+  },
+  "int128_to_nat": {
+    "prefix": "i1tn",
+    "body": "int128_to_nat"
+  },
+  "int256_to_nat": {
+    "prefix": "i2tn",
+    "body": "int256_to_nat"
+  },
+  "uint32_to_nat": {
+    "prefix": "u3tn",
+    "body": "uint32_to_nat"
+  },
+  "uint64_to_nat": {
+    "prefix": "u6tn",
+    "body": "uint64_to_nat"
+  },
+  "uint128_to_nat": {
+    "prefix": "u1tn",
+    "body": "uint128_to_nat"
+  },
+  "uint256_to_nat": {
+    "prefix": "u2tn",
+    "body": "uint256_to_nat"
+  }
+}
