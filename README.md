@@ -1,6 +1,8 @@
 # Scilla for Visual Studio Code
 
-Syntax highlighting for Scilla
+Syntax highlighting and snippets for Scilla
+
+![hl](screenshot/hl.png)
 
 ## License
 

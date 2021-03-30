@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.1
+
+- Updated readme
+
 ## 0.2.0
 
 - Snippets
